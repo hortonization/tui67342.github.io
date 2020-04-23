@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Poem of Motion</title>
+<style type="text/css">
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+@keyframes heartbeat {
+0% {
+transform: scale(1);
+}
+25% {
+transform: scale(1.1);
+}
+40% {
+transform: scale(1);
+}
+60% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
+}
+.heart {
+    animation: .8s infinite heartbeat;
+}
+body {
+    background-color: black;
+    overflow: hidden;
+}
+#heart {
+    width: 100pt;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    animation: .8s infinite heartbeat;
+}
+	#town{
+    position: absolute;
+    opacity: 50%;
+    z-index: -3;
+    top: 108pt;
+    left: 444pt;
+	}
+	#sticks{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		animation: appear 110s;
+	}
+	@keyframes appear {
+		0% {
+			opacity: 0;
+		}
+		90% {
+			opacity: .00000001;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>
+</head>
+
+<body>
+<script>
+		alert("Easily Broken at the Core");
+	</script> 
+<script>
+  function play(){
+	  var heart = document.getElementById("heart");
+	  var vid = document.getElementById("video");
+	  var sticks = document.getElementById("sticks");
+	  if(heart.src = "../images/Heart.png") {
+			heart.src = "../images/Heart_Cracked.png"
+		  vid.play();
+		  sticks.style.opacity = ("100");
+		}
+		else {
+			heart.src = "../images/Heart.png"
+		}
+  }
+   </script>
+	
+<video width="100%" height="100%" id="video">
+	<source src="../media/Conquer the Heart.mp4">
+	Your browser does not support HTNL5 video.
+</video>
+<img src="../images/Heart.png" alt="undertale_heart" id="heart"  onClick="play();">
+	<a href="../index.html"><img src="../images/Just the Sticks.png" alt="Sticks" id="sticks"></a>
+</body>
+</html>

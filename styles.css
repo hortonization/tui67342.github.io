@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	color: white;
+	font-size: 10px;
+}
+body{
+	background-color: black;
+}
+
+/*Main Log*/
+#firstlog{
+	position: absolute;
+	top: 220pt;
+	left: 500pt;
+	z-index: 0;
+}
+#glowlog {
+    position: absolute;
+    top: 214pt;
+    left: 481pt;
+    z-index: 0;
+	opacity: 0;
+}
+#glowlog:hover{
+	opacity: 100;
+	z-index:3;
+}
+
+/*Small Logs*/
+#firstsmalllogs{
+	position: absolute;
+    top: 283pt;
+    left: 637pt;
+	z-index: 1;
+}
+
+/*Rocks*/
+#firstrocks{
+	position: absolute;
+    top: 266pt;
+    left: 499pt;
+	z-index: 2;
+}
+#glowrocks{
+    position: absolute;
+    top: 261pt;
+    left: 501pt;
+    z-index: 2;
+    width: 455px;
+    height: 455px;
+	opacity: 0;
+}
+#glowrocks:hover{
+	opacity: 100;
+	z-index:999;
+}
+
+/*Grass*/
+#firstgrass{
+	position: absolute;
+    top: 284pt;
+    left: 581pt;
+	z-index: 3;
+}
+#glowgrass{
+    position: absolute;
+    top: 284pt;
+    left: 567pt;
+    z-index: 3;
+    width: 350px;
+	opacity: 0;
+}
+#glowgrass:hover{
+	opacity: 100;
+	z-index:999;
+}
+
+/*Sticks*/
+#firststicks{
+	position: absolute;
+    top: 12pt;
+    left: 568pt;
+	z-index: 4;
+}
+#glowsticks{
+    position: absolute;
+    top: 12pt;
+    left: 547pt;
+    z-index: 4;
+    width: 435px;
+    height: 425px;
+	opacity: 0;
+}
+#glowsticks:hover{
+	opacity: 100;
+	z-index:999;
+}
+
+/*Footer*/
+footer p {
+	font-size: 15px;
+	position: absolute;
+	bottom: 0;
+	left: 10pt;
+}

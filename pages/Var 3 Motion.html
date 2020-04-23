@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Poem of Motion</title>
+<style type="text/css">
+	:root {
+	font-size: 10px;
+}
+
+body {
+  background-color: hsl(0, 0%, 5%);
+  overflow: hidden;
+}
+#mom {
+    animation: 5s attack cubic-bezier(0,1.38,.83,.67) infinite;
+}
+	#dad {
+    animation: 5s attackdad cubic-bezier(0,1.38,.83,.67) infinite;
+}
+.swords :nth-child(2) {
+  animation-delay: 1s;
+}.swords :nth-child(3) {
+  animation-delay: 2s;
+}.swords :nth-child(4) {
+  animation-delay: 3s;
+}
+.swords :nth-child(5) {
+  animation-delay: 4s;
+}
+.swords {
+  position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.sword {
+  transition: transform 1s;
+  display: inline-block;
+  margin: 5rem;
+  transform-origin: 50% 77%;
+
+}
+.blade {
+  background-color: hsl(0, 0%, 81%);
+}
+.knob {
+  
+  
+  border-radius: 50%;
+  
+}
+
+.blade, .grip, .knob {
+  margin: auto;
+}
+.guard, .grip {
+  background-color: hsl(53, 19%, 22%);
+}
+.jedi, .sith {
+  width: 1.5rem;
+}
+
+.jedi .blade, .sith .blade {
+  height: 20rem;
+  width: .5rem;
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+}
+.jedi .blade {
+  background-color: hsla(213, 100%, 89%, 1);
+  box-shadow: 0 0 3rem .5rem hsla(210, 100%, 63%, 1);
+}
+.sith .blade {
+  background-color: hsla(0, 100%, 67%, 1);
+  box-shadow: 0 0 2rem .5rem hsla(0, 50%, 59%, .7);
+}
+.jedi .guard, .sith .guard {
+  background-color: hsl(48, 95%, 37%);
+  height: .25rem;
+  width: 100%;
+}
+.jedi .grip, .sith .grip {
+  height: 6rem;
+  width: .5rem;
+}
+
+@keyframes attack {
+ 
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+ 
+}
+	@keyframes attackdad {
+ 
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+ 
+}
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+@keyframes heartbeat {
+0% {
+transform: scale(1);
+}
+25% {
+transform: scale(1.1);
+}
+40% {
+transform: scale(1);
+}
+60% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
+}
+.heart {
+    animation: .8s infinite heartbeat;
+}
+body {
+    background-color: black;
+    overflow: hidden;
+}
+#heart {
+    width: 100pt;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    animation: .8s infinite heartbeat;
+}
+#mom {
+    position: absolute;
+    left: 520pt;
+    top: -56pt;
+}
+#dad {
+    position: absolute;
+    top: -57pt;
+    left: 807pt;
+}
+	#sticks{
+		position: absolute;
+		bottom: 0;
+		opacity: .04;
+	}
+</style>
+</head>
+
+<body>
+<div class="swords">
+  <div class="sword jedi" id="mom">
+    <div class="blade"></div>
+    <div class="grip"></div>
+  </div>
+  
+  <div class="sword sith" id="dad">
+    <div class="blade"></div>
+    <div class="grip"></div>
+  </div>
+</div>
+
+	
+
+<img src="../images/Heart.png" alt="undertale_heart" id="heart"  onClick="play();">
+<a href="../index.html"><img src="../images/Just the Sticks.png" alt="Sticks" id="sticks"></a>
+</body>
+</html>
